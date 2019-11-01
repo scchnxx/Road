@@ -6,24 +6,12 @@ public struct CCTVList: Codable {
         
         public struct LookingView: Codable {
             
-            public var bearing: String
+            public var bearing: RoadSection
             public var image: String
             
             enum CodingKeys: String, CodingKey {
                 case bearing = "Bearing"
                 case image   = "Image"
-            }
-            
-        }
-        
-        public struct RoadSection: Codable {
-            
-            public var start: String
-            public var end: String
-            
-            enum CodingKeys: String, CodingKey {
-                case start = "Start"
-                case end   = "End"
             }
             
         }
@@ -43,7 +31,7 @@ public struct CCTVList: Codable {
         public var roadID: String
         public var roadName: String
         public var roadClass: Int?
-        public var roadDirection: String?
+        public var roadDirection: RoadDirection?
         public var roadSection: RoadSection
         public var locationMile: String
         public var layoutMapURL: String?

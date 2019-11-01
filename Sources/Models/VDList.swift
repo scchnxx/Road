@@ -8,7 +8,7 @@ public struct VDList: Codable {
 			
 			public var linkID: String
 			public var bearing: String
-			public var roadDirection: String
+			public var roadDirection: RoadDirection
 			public var laneNum: Int
 			public var actualLaneNum: Int
 			
@@ -18,18 +18,6 @@ public struct VDList: Codable {
 				case roadDirection = "RoadDirection"
 				case laneNum 	   = "LaneNum"
 				case actualLaneNum = "ActualLaneNum"
-			}
-			
-		}
-		
-		public struct RoadSection: Codable {
-			
-			public var start: String
-			public var end: String
-			
-			enum CodingKeys: String, CodingKey {
-				case start = "Start"
-				case end   = "End"
 			}
 			
 		}

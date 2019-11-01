@@ -4,26 +4,33 @@ public struct SectionList: Codable {
     
     public struct Section: Codable {
         
-        public struct RoadSection: Codable {
-            
-            public var start: String
-            public var end: String
-            
-            enum CodingKeys: String, CodingKey {
-                case start = "Start"
-                case end   = "End"
-            }
-            
-        }
-        
         public struct SectionMile: Codable {
             
-            public var startKM: String
-            public var endKM: String
+            public var startKM: Float
+            public var endKM: Float
             
             enum CodingKeys: String, CodingKey {
                 case startKM = "StartKM"
                 case endKM   = "EndKM"
+            }
+            
+            public init(from decoder: Decoder) throws {
+                let container = try decoder.container(keyedBy: CodingKeys.self)
+                let start = try container.decode(String.self, forKey: .startKM)
+                let end = try container.decode(String.self, forKey: .endKM)
+                
+                if let start = start.sectionMiles {
+                    startKM = start
+                } else {
+                    throw DecodingError.dataCorruptedError(forKey: CodingKeys.startKM, in: container,
+                                                           debugDescription: "StartKM doesn't match {a}K+{b}")
+                }
+                if let end = end.sectionMiles {
+                    endKM = end
+                } else {
+                    throw DecodingError.dataCorruptedError(forKey: CodingKeys.endKM, in: container,
+                                                           debugDescription: "EndKM doesn't match {a}K+{b}")
+                }
             }
             
         }
@@ -46,7 +53,7 @@ public struct SectionList: Codable {
         public var roadID: String
         public var roadName: String
         public var roadClass: Int
-        public var roadDirection: String
+        public var roadDirection: RoadDirection
         public var roadSection: RoadSection
         public var sectionLength: Float
         public var sectionMile: SectionMile
