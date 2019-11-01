@@ -15,6 +15,9 @@ extension CCTVPreviewView {
 }
 
 #if os(OSX)
+
+// MARK: - macOS
+
 public class CCTVPreviewView: NSView {
     
     private let viewModel = CCTVPreviewViewModel()
@@ -42,6 +45,9 @@ public class CCTVPreviewView: NSView {
     
 }
 #else
+
+// MARK: - iOS
+
 public class CCTVPreviewView: UIView {
     
     private let viewModel = CCTVPreviewViewModel()
@@ -63,6 +69,8 @@ public class CCTVPreviewView: UIView {
     
 }
 #endif
+
+// MARK: - Shared
 
 extension CCTVPreviewView {
     
