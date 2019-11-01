@@ -47,8 +47,8 @@ public struct RoadFetchOptions {
 
 extension URLSession {
     
-    public func roadFetch<T: Codable>(_ type: T.Type, options: RoadFetchOptions? = nil,
-									  _ completionHandler: @escaping (Result<T, FetchError>) -> Void) -> URLSessionDataTask?
+    public func dataTask<T: Codable>(with type: T.Type, options: RoadFetchOptions? = nil,
+                                     _ completionHandler: @escaping (Result<T, FetchError>) -> Void) -> URLSessionDataTask?
 	{
         guard let urlProvider = T.self as? RoadURLProvider.Type else {
             return nil
