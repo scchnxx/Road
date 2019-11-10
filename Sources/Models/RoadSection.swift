@@ -1,4 +1,4 @@
-public struct RoadSection: Codable {
+public struct RoadSection: Equatable, Codable {
     
     public var start: String
     public var end: String

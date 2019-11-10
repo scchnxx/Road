@@ -1,10 +1,10 @@
 import Foundation
 
-public struct CCTVList: Codable {
+public struct CCTVList: Equatable, Codable {
     
-    public struct CCTV: Codable {
+    public struct CCTV: Equatable, Codable {
         
-        public struct LookingView: Codable {
+        public struct LookingView: Equatable, Codable {
             
             public var bearing: RoadSection
             public var image: String
@@ -72,7 +72,7 @@ public struct CCTVList: Codable {
 
 extension CCTVList: RoadURLProvider {
     
-    static var url: URL {
+    public static var url: URL {
         let str = "https://traffic.transportdata.tw/MOTC/v2/Road/Traffic/CCTV/Freeway?$format=JSON"
         return URL(string: str)!
     }

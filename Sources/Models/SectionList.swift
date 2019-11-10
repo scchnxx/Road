@@ -1,41 +1,22 @@
 import Foundation
 
-public struct SectionList: Codable {
+public struct SectionList: Equatable, Codable {
     
-    public struct Section: Codable {
+    public struct Section: Equatable, Codable {
         
-        public struct SectionMile: Codable {
+        public struct SectionMile: Equatable, Codable {
             
-            public var startKM: Float
-            public var endKM: Float
+            public var startKM: String
+            public var endKM: String
             
             enum CodingKeys: String, CodingKey {
                 case startKM = "StartKM"
                 case endKM   = "EndKM"
             }
             
-            public init(from decoder: Decoder) throws {
-                let container = try decoder.container(keyedBy: CodingKeys.self)
-                let start = try container.decode(String.self, forKey: .startKM)
-                let end = try container.decode(String.self, forKey: .endKM)
-                
-                if let start = start.sectionMiles {
-                    startKM = start
-                } else {
-                    throw DecodingError.dataCorruptedError(forKey: CodingKeys.startKM, in: container,
-                                                           debugDescription: "StartKM doesn't match {a}K+{b}")
-                }
-                if let end = end.sectionMiles {
-                    endKM = end
-                } else {
-                    throw DecodingError.dataCorruptedError(forKey: CodingKeys.endKM, in: container,
-                                                           debugDescription: "EndKM doesn't match {a}K+{b}")
-                }
-            }
-            
         }
         
-        public struct Point: Codable {
+        public struct Point: Equatable, Codable {
             
             public var positionLat: Float
             public var positionLon: Float
@@ -89,7 +70,7 @@ public struct SectionList: Codable {
 
 extension SectionList: RoadURLProvider {
     
-    static var url: URL {
+    public static var url: URL {
         let str = "https://traffic.transportdata.tw/MOTC/v2/Road/Traffic/Section/Freeway?$format=JSON"
         return URL(string: str)!
     }

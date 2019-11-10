@@ -1,10 +1,10 @@
 import Foundation
 
-public struct SectionLinkList: Codable {
+public struct SectionLinkList: Equatable, Codable {
     
-    public struct SectionLink: Codable {
+    public struct SectionLink: Equatable, Codable {
         
-        public struct LinkIDItem: Codable {
+        public struct LinkIDItem: Equatable, Codable {
             public var linkID: String
             
             enum CodingKeys: String, CodingKey {
@@ -39,7 +39,7 @@ public struct SectionLinkList: Codable {
 
 extension SectionLinkList: RoadURLProvider {
     
-    static var url: URL {
+    public static var url: URL {
         let str = "https://traffic.transportdata.tw/MOTC/v2/Road/Traffic/SectionLink/Freeway?$format=JSON"
         return URL(string: str)!
     }

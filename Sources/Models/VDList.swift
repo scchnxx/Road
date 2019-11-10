@@ -1,10 +1,10 @@
 import Foundation
 
-public struct VDList: Codable {
+public struct VDList: Equatable, Codable {
 	
-	public struct VD: Codable {
+	public struct VD: Equatable, Codable {
 		
-		public struct DetectionLink: Codable {
+		public struct DetectionLink: Equatable, Codable {
 			
 			public var linkID: String
 			public var bearing: String
@@ -70,7 +70,7 @@ public struct VDList: Codable {
 
 extension VDList: RoadURLProvider {
     
-    static var url: URL {
+    public static var url: URL {
         let str = "https://traffic.transportdata.tw/MOTC/v2/Road/Traffic/VD/Freeway?$format=JSON"
         return URL(string: str)!
     }

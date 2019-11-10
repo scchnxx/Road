@@ -22,6 +22,8 @@ public class CCTVPreviewView: NSView {
     
     private let viewModel = CCTVPreviewViewModel()
     
+    public var clearImageAfterStop = false
+    
     public var backgroundColor: NSColor? {
         didSet {
             layer?.backgroundColor = backgroundColor?.cgColor
@@ -46,6 +48,8 @@ public class CCTVPreviewView: NSView {
 public class CCTVPreviewView: UIView {
     
     private let viewModel = CCTVPreviewViewModel()
+    
+    public var clearImageAfterStop = false
     
     public required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -113,7 +117,9 @@ extension CCTVPreviewView {
         }
         set {
             viewModel.didStop = { [weak self] in
-                self?.layer?.contents = nil
+                if self?.clearImageAfterStop == true {
+                    self?.mainLayer?.contents = nil
+                }
                 newValue?()
             }
         }
@@ -126,21 +132,25 @@ extension CCTVPreviewView {
         wantsLayer = true
         #endif
         
-        layer?.contentsGravity = .resizeAspect
+        mainLayer?.contentsGravity = .resizeAspect
         
         backgroundColor = .black
         
-        viewModel.didOutputImageData = { [unowned self] data in
+        viewModel.didOutputImageData = { [weak self] data in
+            guard let self = self else { return }
             #if os(OSX)
             let image = NSImage(data: data)
+            self.mainLayer?.contents = image
             #else
             let image = UIImage(data: data)
+            self.mainLayer?.contents = image?.cgImage
             #endif
-            self.layer?.contents = image
         }
         
         viewModel.didStop = { [weak self] in
-            self?.layer?.contents = nil
+            if self?.clearImageAfterStop == true {
+                self?.mainLayer?.contents = nil
+            }
         }
     }
     

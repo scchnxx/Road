@@ -1,13 +1,13 @@
 import Foundation
 
-protocol RoadURLProvider {
+public protocol RoadURLProvider {
     static var url: URL { get }
     static func url(select: String?, top: Int?, orderBy: String?) -> URL
 }
 
 extension RoadURLProvider {
     
-    static func url(select: String?, top: Int?, orderBy: String?) -> URL {
+    public static func url(select: String?, top: Int?, orderBy: String?) -> URL {
         var str = url.absoluteString
         if let select = select {
             str += "&$select=\(select)"
