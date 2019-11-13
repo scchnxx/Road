@@ -3,7 +3,7 @@ import Foundation
 fileprivate let SOI = Data([0xFF, 0xD8])
 fileprivate let EOI = Data([0xFF, 0xD9])
 
-extension CCTVPreviewViewModel {
+extension PreviewViewModel {
     
     enum State: Int {
         case loading
@@ -13,7 +13,7 @@ extension CCTVPreviewViewModel {
     
 }
 
-class CCTVPreviewViewModel: NSObject {
+class PreviewViewModel: NSObject {
     
     private let timeoutInterval = TimeInterval(3)
     private var session: URLSession!
@@ -83,7 +83,7 @@ class CCTVPreviewViewModel: NSObject {
     
 }
 
-extension CCTVPreviewViewModel: URLSessionDelegate, URLSessionDataDelegate {
+extension PreviewViewModel: URLSessionDelegate, URLSessionDataDelegate {
     
     func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
         imageData += data

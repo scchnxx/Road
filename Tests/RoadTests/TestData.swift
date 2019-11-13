@@ -298,4 +298,560 @@ struct TestData {
     }
     """
     
+    static let vdLiveList = """
+    {
+      "UpdateTime": "2019-11-13T10:03:28+08:00",
+      "UpdateInterval": 60,
+      "SrcUpdateTime": "2019-11-13T10:02:00+08:00",
+      "SrcUpdateInterval": 60,
+      "AuthorityCode": "NFB",
+      "VDLives": [
+        {
+          "VDID": "VD-N1-S-103.670-M-LOOP",
+          "SubAuthorityCode": "NFB-CR",
+          "LinkFlows": [
+            {
+              "LinkID": "0000100010300J",
+              "Lanes": [
+                {
+                  "LaneID": 0,
+                  "LaneType": 2,
+                  "Speed": 90,
+                  "Occupancy": 12,
+                  "Vehicles": [
+                    {
+                      "VehicleType": "S",
+                      "Volume": 38,
+                      "Speed": 90
+                    },
+                    {
+                      "VehicleType": "L",
+                      "Volume": 1,
+                      "Speed": 97
+                    },
+                    {
+                      "VehicleType": "T",
+                      "Volume": 0,
+                      "Speed": 0
+                    }
+                  ]
+                },
+                {
+                  "LaneID": 1,
+                  "LaneType": 2,
+                  "Speed": 101,
+                  "Occupancy": 10,
+                  "Vehicles": [
+                    {
+                      "VehicleType": "S",
+                      "Volume": 27,
+                      "Speed": 100
+                    },
+                    {
+                      "VehicleType": "L",
+                      "Volume": 1,
+                      "Speed": 109
+                    },
+                    {
+                      "VehicleType": "T",
+                      "Volume": 3,
+                      "Speed": 103
+                    }
+                  ]
+                },
+                {
+                  "LaneID": 2,
+                  "LaneType": 2,
+                  "Speed": 86,
+                  "Occupancy": 7,
+                  "Vehicles": [
+                    {
+                      "VehicleType": "S",
+                      "Volume": 10,
+                      "Speed": 89
+                    },
+                    {
+                      "VehicleType": "L",
+                      "Volume": 6,
+                      "Speed": 82
+                    },
+                    {
+                      "VehicleType": "T",
+                      "Volume": 1,
+                      "Speed": 87
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Status": 0,
+          "DataCollectTime": "2019-11-13T10:00:00+08:00"
+        },
+        {
+          "VDID": "VD-N1-N-10.780-M-RS",
+          "SubAuthorityCode": "NFB-NR",
+          "LinkFlows": [
+            {
+              "LinkID": "0000101107060F",
+              "Lanes": [
+                {
+                  "LaneID": 0,
+                  "LaneType": 2,
+                  "Speed": 33,
+                  "Occupancy": 43,
+                  "Vehicles": [
+                    {
+                      "VehicleType": "S",
+                      "Volume": 16,
+                      "Speed": 33
+                    },
+                    {
+                      "VehicleType": "L",
+                      "Volume": 2,
+                      "Speed": 33
+                    },
+                    {
+                      "VehicleType": "T",
+                      "Volume": 4,
+                      "Speed": 33
+                    }
+                  ]
+                },
+                {
+                  "LaneID": 1,
+                  "LaneType": 2,
+                  "Speed": 25,
+                  "Occupancy": 41,
+                  "Vehicles": [
+                    {
+                      "VehicleType": "S",
+                      "Volume": 18,
+                      "Speed": 25
+                    },
+                    {
+                      "VehicleType": "L",
+                      "Volume": 1,
+                      "Speed": 25
+                    },
+                    {
+                      "VehicleType": "T",
+                      "Volume": 0,
+                      "Speed": 0
+                    }
+                  ]
+                },
+                {
+                  "LaneID": 2,
+                  "LaneType": 2,
+                  "Speed": 33,
+                  "Occupancy": 22,
+                  "Vehicles": [
+                    {
+                      "VehicleType": "S",
+                      "Volume": 12,
+                      "Speed": 33
+                    },
+                    {
+                      "VehicleType": "L",
+                      "Volume": 3,
+                      "Speed": 33
+                    },
+                    {
+                      "VehicleType": "T",
+                      "Volume": 1,
+                      "Speed": 33
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Status": 0,
+          "DataCollectTime": "2019-11-13T10:01:00+08:00"
+        },
+        {
+          "VDID": "VD-N1-N-57-O-SW-1A-內壢",
+          "SubAuthorityCode": "NFB-NR",
+          "LinkFlows": [
+            {
+              "LinkID": "0000101120020H",
+              "Lanes": [
+                {
+                  "LaneID": 0,
+                  "LaneType": 2,
+                  "Speed": 119,
+                  "Occupancy": 5,
+                  "Vehicles": [
+                    {
+                      "VehicleType": "S",
+                      "Volume": 0,
+                      "Speed": 0
+                    },
+                    {
+                      "VehicleType": "L",
+                      "Volume": 0,
+                      "Speed": 0
+                    },
+                    {
+                      "VehicleType": "T",
+                      "Volume": 4,
+                      "Speed": 119
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Status": 0,
+          "DataCollectTime": "2019-11-13T10:01:00+08:00"
+        },
+        {
+          "VDID": "VD-N1-S-111.160-M-LOOP",
+          "SubAuthorityCode": "NFB-CR",
+          "LinkFlows": [
+            {
+              "LinkID": "0000100011100K",
+              "Lanes": [
+                {
+                  "LaneID": 0,
+                  "LaneType": 2,
+                  "Speed": 97,
+                  "Occupancy": 5,
+                  "Vehicles": [
+                    {
+                      "VehicleType": "S",
+                      "Volume": 18,
+                      "Speed": 98
+                    },
+                    {
+                      "VehicleType": "L",
+                      "Volume": 0,
+                      "Speed": 0
+                    },
+                    {
+                      "VehicleType": "T",
+                      "Volume": 1,
+                      "Speed": 81
+                    }
+                  ]
+                },
+                {
+                  "LaneID": 1,
+                  "LaneType": 2,
+                  "Speed": 108,
+                  "Occupancy": 5,
+                  "Vehicles": [
+                    {
+                      "VehicleType": "S",
+                      "Volume": 18,
+                      "Speed": 108
+                    },
+                    {
+                      "VehicleType": "L",
+                      "Volume": 1,
+                      "Speed": 105
+                    },
+                    {
+                      "VehicleType": "T",
+                      "Volume": 0,
+                      "Speed": 0
+                    }
+                  ]
+                },
+                {
+                  "LaneID": 2,
+                  "LaneType": 2,
+                  "Speed": 91,
+                  "Occupancy": 3,
+                  "Vehicles": [
+                    {
+                      "VehicleType": "S",
+                      "Volume": 6,
+                      "Speed": 90
+                    },
+                    {
+                      "VehicleType": "L",
+                      "Volume": 3,
+                      "Speed": 92
+                    },
+                    {
+                      "VehicleType": "T",
+                      "Volume": 0,
+                      "Speed": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Status": 0,
+          "DataCollectTime": "2019-11-13T10:00:00+08:00"
+        },
+        {
+          "VDID": "VD-N3-N-176-I-WN-22Y-北上入口3-沙鹿",
+          "SubAuthorityCode": "NFB-CR",
+          "LinkFlows": [
+            {
+              "LinkID": "0000301134030B",
+              "Lanes": [
+                {
+                  "LaneID": 0,
+                  "LaneType": 2,
+                  "Speed": 0,
+                  "Occupancy": 0,
+                  "Vehicles": [
+                    {
+                      "VehicleType": "S",
+                      "Volume": 0,
+                      "Speed": 0
+                    },
+                    {
+                      "VehicleType": "L",
+                      "Volume": 0,
+                      "Speed": 0
+                    },
+                    {
+                      "VehicleType": "T",
+                      "Volume": 0,
+                      "Speed": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Status": 0,
+          "DataCollectTime": "2019-11-13T10:00:00+08:00"
+        },
+        {
+          "VDID": "VD-N1-S-139-O-S-1-銅鑼科學園區",
+          "SubAuthorityCode": "NFB-CR",
+          "LinkFlows": [
+            {
+              "LinkID": "0000101034000K",
+              "Lanes": [
+                {
+                  "LaneID": 0,
+                  "LaneType": 2,
+                  "Speed": 84,
+                  "Occupancy": 1,
+                  "Vehicles": [
+                    {
+                      "VehicleType": "S",
+                      "Volume": 3,
+                      "Speed": 88
+                    },
+                    {
+                      "VehicleType": "L",
+                      "Volume": 1,
+                      "Speed": 72
+                    },
+                    {
+                      "VehicleType": "T",
+                      "Volume": 0,
+                      "Speed": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Status": 0,
+          "DataCollectTime": "2019-11-13T10:00:00+08:00"
+        },
+        {
+          "VDID": "VD-N10-W-25-I-SW-1-Loop",
+          "SubAuthorityCode": "NFB-SR",
+          "LinkFlows": [
+            {
+              "LinkID": "0001001107000T",
+              "Lanes": [
+                {
+                  "LaneID": 0,
+                  "LaneType": 2,
+                  "Speed": -99,
+                  "Occupancy": -99,
+                  "Vehicles": [
+                    {
+                      "VehicleType": "S",
+                      "Volume": -99,
+                      "Speed": -99
+                    },
+                    {
+                      "VehicleType": "L",
+                      "Volume": -99,
+                      "Speed": -99
+                    },
+                    {
+                      "VehicleType": "T",
+                      "Volume": -99,
+                      "Speed": -99
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Status": 1,
+          "DataCollectTime": "2019-11-13T10:01:00+08:00"
+        },
+        {
+          "VDID": "VD-N3-S-248.861-M-LOOP",
+          "SubAuthorityCode": "NFB-CR",
+          "LinkFlows": [
+            {
+              "LinkID": "0000300024800M",
+              "Lanes": [
+                {
+                  "LaneID": 0,
+                  "LaneType": 2,
+                  "Speed": 104,
+                  "Occupancy": 1,
+                  "Vehicles": [
+                    {
+                      "VehicleType": "S",
+                      "Volume": 8,
+                      "Speed": 104
+                    },
+                    {
+                      "VehicleType": "L",
+                      "Volume": 0,
+                      "Speed": 0
+                    },
+                    {
+                      "VehicleType": "T",
+                      "Volume": 0,
+                      "Speed": 0
+                    }
+                  ]
+                },
+                {
+                  "LaneID": 1,
+                  "LaneType": 2,
+                  "Speed": 105,
+                  "Occupancy": 2,
+                  "Vehicles": [
+                    {
+                      "VehicleType": "S",
+                      "Volume": 9,
+                      "Speed": 105
+                    },
+                    {
+                      "VehicleType": "L",
+                      "Volume": 0,
+                      "Speed": 0
+                    },
+                    {
+                      "VehicleType": "T",
+                      "Volume": 0,
+                      "Speed": 0
+                    }
+                  ]
+                },
+                {
+                  "LaneID": 2,
+                  "LaneType": 2,
+                  "Speed": 90,
+                  "Occupancy": 4,
+                  "Vehicles": [
+                    {
+                      "VehicleType": "S",
+                      "Volume": 4,
+                      "Speed": 84
+                    },
+                    {
+                      "VehicleType": "L",
+                      "Volume": 0,
+                      "Speed": 0
+                    },
+                    {
+                      "VehicleType": "T",
+                      "Volume": 3,
+                      "Speed": 97
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Status": 0,
+          "DataCollectTime": "2019-11-13T10:00:00+08:00"
+        },
+        {
+          "VDID": "VD-N4-W-14-I-W-1X-西向入口2",
+          "SubAuthorityCode": "NFB-CR",
+          "LinkFlows": [
+            {
+              "LinkID": "0000401105000B",
+              "Lanes": [
+                {
+                  "LaneID": 0,
+                  "LaneType": 2,
+                  "Speed": -99,
+                  "Occupancy": -99,
+                  "Vehicles": [
+                    {
+                      "VehicleType": "S",
+                      "Volume": -99,
+                      "Speed": -99
+                    },
+                    {
+                      "VehicleType": "L",
+                      "Volume": -99,
+                      "Speed": -99
+                    },
+                    {
+                      "VehicleType": "T",
+                      "Volume": -99,
+                      "Speed": -99
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Status": 0,
+          "DataCollectTime": "2019-11-13T10:00:00+08:00"
+        },
+        {
+          "VDID": "VD-N3-N-182-O-SW-22-北上出口-龍井",
+          "SubAuthorityCode": "NFB-CR",
+          "LinkFlows": [
+            {
+              "LinkID": "0000301135050B",
+              "Lanes": [
+                {
+                  "LaneID": 0,
+                  "LaneType": 2,
+                  "Speed": 43,
+                  "Occupancy": 7,
+                  "Vehicles": [
+                    {
+                      "VehicleType": "S",
+                      "Volume": 5,
+                      "Speed": 44
+                    },
+                    {
+                      "VehicleType": "L",
+                      "Volume": 1,
+                      "Speed": 43
+                    },
+                    {
+                      "VehicleType": "T",
+                      "Volume": 1,
+                      "Speed": 40
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Status": 0,
+          "DataCollectTime": "2019-11-13T10:00:00+08:00"
+        }
+      ]
+    }
+    """
+    
 }

@@ -35,6 +35,14 @@ public struct CCTVList: Equatable, Codable {
         public var roadSection: RoadSection
         public var locationMile: String
         public var layoutMapURL: String?
+        public var alternativeRoadDirection: RoadDirection {
+            let strs = cctvID.split(separator: "-")
+            if strs.count == 5 {
+                return RoadDirection(string: String(strs[2]))
+            } else {
+                return RoadDirection(rawValue: 0)
+            }
+        }
         
         enum CodingKeys: String, CodingKey {
             case cctvID                  = "CCTVID"

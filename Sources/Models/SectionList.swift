@@ -2,7 +2,11 @@ import Foundation
 
 public struct SectionList: Equatable, Codable {
     
-    public struct Section: Equatable, Codable {
+    public struct Section: Equatable, Codable, Hashable {
+        
+        public func hash(into hasher: inout Hasher) {
+            hasher.combine(sectionID)
+        }
         
         public struct SectionMile: Equatable, Codable {
             

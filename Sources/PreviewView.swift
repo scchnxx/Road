@@ -4,7 +4,7 @@ import Cocoa
 import UIKit
 #endif
 
-extension CCTVPreviewView {
+extension PreviewView {
     
     public enum State: Int {
         case loading
@@ -18,9 +18,9 @@ extension CCTVPreviewView {
 
 // MARK: - macOS
 
-public class CCTVPreviewView: NSView {
+public class PreviewView: NSView {
     
-    private let viewModel = CCTVPreviewViewModel()
+    private let viewModel = PreviewViewModel()
     
     public var clearImageAfterStop = false
     
@@ -45,9 +45,9 @@ public class CCTVPreviewView: NSView {
 
 // MARK: - iOS
 
-public class CCTVPreviewView: UIView {
+public class PreviewView: UIView {
     
-    private let viewModel = CCTVPreviewViewModel()
+    private let viewModel = PreviewViewModel()
     
     public var clearImageAfterStop = false
     
@@ -66,7 +66,7 @@ public class CCTVPreviewView: UIView {
 
 // MARK: - Shared
 
-extension CCTVPreviewView {
+extension PreviewView {
     
     // MARK: Properties
     

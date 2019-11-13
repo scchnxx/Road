@@ -27,6 +27,13 @@ final class RoadTests: XCTestCase {
         XCTAssertNotNil(result)
     }
     
+    func testVDLiveList() {
+        let json = TestData.vdLiveList.data(using: .utf8)!
+        let result = (try? JSONDecoder().decode(VDLiveList.self, from: json))
+        printErr(VDLiveList.self, from: json)
+        XCTAssertNotNil(result)
+    }
+    
     func printErr<T: Codable>(_ type: T.Type, from data: Data) {
         do {
             _ = try JSONDecoder().decode(T.self, from: data)

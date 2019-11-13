@@ -11,6 +11,17 @@ public struct RoadDirection: Equatable, OptionSet, Codable, CustomStringConverti
     public static let e = RoadDirection(rawValue: 1 << 2)
     public static let w = RoadDirection(rawValue: 1 << 3)
     
+    public init(string: String) {
+        let string = string.lowercased()
+        
+        rawValue = 0
+        
+        if string.contains("n") { update(with: .n) }
+        if string.contains("s") { update(with: .s) }
+        if string.contains("e") { update(with: .e) }
+        if string.contains("w") { update(with: .w) }
+    }
+    
     public init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         let string = try container.decode(String.self).lowercased()
